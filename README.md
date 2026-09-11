@@ -1,6 +1,6 @@
 # Descabellados
 
-Sitio web oficial de **Descabellados**, una ciudad única, creativa y llena de historias por descubrir.
+Sitio web oficial de **Descabellados**, una ciudad única, creativa y llena de pelados por descubrir.
 
 ## Descripción
 
@@ -28,13 +28,11 @@ Descabellados es una ciudad pensada para quienes buscan experiencias diferentes.
 
 El objetivo del sitio es mostrar la identidad de Descabellados, fomentar el turismo y mantener informados a sus habitantes y visitantes.
 
-## Instalación
-
-1. Descargar o clonar el proyecto.
-2. Abrir la carpeta del proyecto.
-3. Ejecutar el archivo `index.html` en un navegador.
 
 
-## Autor
+## tutores
 
 Proyecto web de la ciudad de **Descabellados**.
+Braian Venche
+Agustin Alvares
+Joaquin Boikovski
