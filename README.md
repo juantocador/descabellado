@@ -21,8 +21,7 @@ Descabellados es una ciudad pensada para quienes buscan experiencias diferentes.
 
 - HTML
 - CSS
-- JavaScript
-- Diseño responsive para celulares, tablets y computadoras.
+
 
 
 ## Objetivo
