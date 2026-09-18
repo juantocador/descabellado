@@ -1,43 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descabellada | Contacto</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="index.html">DESCABELLADA</a>
-    <nav aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="ciudad.html">La ciudad</a>
-      <a href="lugares.html">Lugares</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero compact">
-      <p class="eyebrow">Oficina de turismo</p>
-      <h1>Estamos para orientarte.</h1>
-      <p>Consultá horarios, recorridos y actividades antes de visitar Descabellada.</p>
-    </section>
-    <section class="section contact">
-      <img src="IMG/pelados-descabellada.png" alt="Pelados consultando la oficina de turismo de Descabellada">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contactá a la oficina de turismo de Descabellada y anotate para una batalla de aura."
+    />
+    <title>Descabellada | Contacto</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html">DESCABELLADA<span>•</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a><a href="ciudad.html">La ciudad</a
+        ><a href="lugares.html">Lugares</a
+        ><a class="active" href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero compact">
+        <p class="eyebrow">Oficina de turismo</p>
+        <h1>Estamos para orientarte.</h1>
+        <p>
+          Consultá horarios, recorridos y actividades antes de visitar
+          Descabellada. También podés anotarte para participar en una batalla de
+          aura.
+        </p>
+      </section>
+      <section class="section contact">
+        <div class="contact-card">
+          <p class="eyebrow">Te esperamos</p>
+          <h2>Centro de Información Descabellada</h2>
+          <address>
+            Av. de los Pelados 1842<br />Centro histórico, Descabellada
+          </address>
+          <div class="contact-list">
+            <p>
+              <strong>Teléfono</strong
+              ><a href="tel:+5491100002026">+54 9 11 0000-2026</a>
+            </p>
+            <p>
+              <strong>Email</strong
+              ><a href="mailto:hola@descabellada.tur.ar"
+                >hola@descabellada.tur.ar</a
+              >
+            </p>
+            <p><strong>Horarios</strong><span>Lun–sáb · 09:00 a 18:00</span></p>
+          </div>
+          <a class="button" href="mailto:hola@descabellada.tur.ar"
+            >Escribir a turismo</a
+          >
+        </div>
+        <img
+          src="IMG/festival.png"
+          alt="Visitantes disfrutando un festival en Descabellada"
+        />
+      </section>
+      <section class="section aura-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Actividad especial</p>
+            <h2>Participá en una batalla de aura</h2>
+          </div>
+          <p class="section-note">
+            Mostrá tu estilo, elegí tu energía y sumate a un encuentro amistoso
+            frente al mar.
+          </p>
+        </div>
+        <form
+          class="aura-form"
+          action="mailto:hola@descabellada.tur.ar"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-grid">
+            <label
+              >Nombre completo<input
+                type="text"
+                name="nombre"
+                autocomplete="name"
+                required
+                placeholder="Tu nombre" /></label
+            ><label
+              >Email de contacto<input
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                placeholder="tu@email.com" /></label
+            ><label
+              >Edad<select name="edad" required>
+                <option value="">Seleccioná una opción</option>
+                <option>Menos de 18</option>
+                <option>18 a 30</option>
+                <option>31 a 50</option>
+                <option>Más de 50</option>
+              </select></label
+            ><label
+              >Tipo de aura<select name="aura" required>
+                <option value="">Elegí tu energía</option>
+                <option>Marina</option>
+                <option>Solar</option>
+                <option>Remolino</option>
+                <option>Pelada legendaria</option>
+              </select></label
+            >
+          </div>
+          <label
+            >¿Qué te gustaría aportar a la batalla?<textarea
+              name="mensaje"
+              rows="5"
+              placeholder="Contanos tu estilo, habilidad o idea..."
+              required
+            ></textarea></label
+          ><label class="check-field"
+            ><input type="checkbox" name="acepta" required /><span
+              >Acepto recibir información sobre esta actividad y confirmo que
+              los datos son correctos.</span
+            ></label
+          ><button class="button" type="submit">Quiero participar</button>
+        </form>
+      </section>
+      <section class="section faq">
+        <p class="eyebrow">Preguntas rápidas</p>
+        <h2>Antes de venir</h2>
+        <div class="faq-grid">
+          <div>
+            <h3>¿La entrada a los lugares es gratuita?</h3>
+            <p>
+              Sí, los paseos y espacios públicos de Descabellada son de acceso
+              libre.
+            </p>
+          </div>
+          <div>
+            <h3>¿Cómo llego desde el centro?</h3>
+            <p>
+              Podés caminar por el paseo costero o consultar recorridos en la
+              oficina.
+            </p>
+          </div>
+          <div>
+            <h3>¿Qué es una batalla de aura?</h3>
+            <p>
+              Un encuentro amistoso donde cada participante presenta su energía,
+              creatividad y mejor pose frente al público.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <strong>Descabellada</strong> ·
+        <a href="index.html">Volver al inicio</a>
+      </p>
       <div>
-        <h2>Centro de Información Descabellada</h2>
-        <address>
-          Av. de los Pelados 1842<br>
-          Centro histórico, Descabellada
-        </address>
-        <p><strong>Teléfono:</strong> <a href="tel:+5491100002026">+54 9 11 0000-2026</a></p>
-        <p><strong>Email:</strong> <a href="mailto:hola@descabellada.tur.ar">hola@descabellada.tur.ar</a></p>
-        <p><a href="https://www.instagram.com/descabellada.turismo" target="_blank" rel="noopener noreferrer">Instagram ficticio de Descabellada</a></p>
+        <a href="lugares.html">Lugares</a><a href="ciudad.html">La ciudad</a>
       </div>
-    </section>
-  </main>
-  <footer>
-    <p><strong>Descabellada</strong> · <a href="index.html">Volver al inicio</a></p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
