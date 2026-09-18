@@ -11,9 +11,7 @@ Descabellados es una ciudad pensada para quienes buscan experiencias diferentes.
 - Información general sobre la ciudad.
 - Sección de lugares turísticos y destacados.
 - Calendario de eventos.
-- Noticias y novedades.
-- Información sobre comercios y servicios.
-- Galería de imágenes.
+- Información sobre comercios 
 - Formulario de contacto.
 
 
