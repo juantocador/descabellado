@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Descabellada | Inicio</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="index.html">DESCABELLADA</a>
-    <nav aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="ciudad.html">La ciudad</a>
-      <a href="lugares.html">Lugares</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Guía turística oficial</p>
-      <h1>Una ciudad sin pelos en la lengua.</h1>
-      <p>Descabellada es la ciudad donde hay pelados, humor, mar y una identidad imposible de olvidar.</p>
-      <a class="button" href="#destacados">Ver destacados</a>
-    </section>
-    <section id="destacados" class="section">
-      <p class="eyebrow">Para descubrir</p>
-      <h2>La ciudad se vive con la cabeza en alto</h2>
-      <div class="grid">
-        <article>
-          <img src="IMG/pelados-descabellada.png" alt="Grupo de pelados jóvenes celebrando en Descabellada">
-          <h3>Gente auténtica</h3>
-          <p>Vecinos y visitantes convierten cada paseo en una historia.</p>
-        </article>
-        <article>
-          <img src="IMG/mirador-descabellada.png" alt="Pelados disfrutando del mirador costero de Descabellada">
-          <h3>Vistas al mar</h3>
-          <p>El Mirador de la Cabeza ofrece atardeceres memorables.</p>
-        </article>
-        <article>
-          <img src="IMG/plaza-descabellada.png" alt="Pelados participando de un festival cultural en una plaza">
-          <h3>Agenda cultural</h3>
-          <p>Festivales, música y encuentros abiertos a toda la comunidad.</p>
-        </article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guía turística de Descabellada: una ciudad costera con humor, mar y mucha personalidad."
+    />
+    <title>Descabellada | Inicio</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html">DESCABELLADA<span>•</span></a>
+      <nav aria-label="Navegación principal">
+        <a class="active" href="index.html">Inicio</a
+        ><a href="ciudad.html">La ciudad</a><a href="lugares.html">Lugares</a
+        ><a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero home-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Guía turística oficial · Temporada 2026</p>
+          <h1>Una ciudad sin pelos en la lengua.</h1>
+          <p>
+            Descabellada es mar, humor y una identidad imposible de olvidar.
+            Vení a conocer el lugar donde la cabeza siempre se lleva en alto,
+            las historias se comparten y cada esquina tiene algo para contar.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#destacados">Explorar la ciudad</a
+            ><a class="text-link" href="lugares.html">Ver lugares →</a>
+          </div>
+        </div>
+        <div class="hero-stamp" aria-label="Sello de la ciudad">
+          <strong>DCB</strong><span>desde<br />1842</span>
+        </div>
+      </section>
+      <section id="destacados" class="section intro-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Para descubrir</p>
+            <h2>La ciudad se vive con la cabeza en alto</h2>
+          </div>
+          <p class="section-note">
+            Tres motivos para empezar a recorrer una ciudad que no se parece a
+            ninguna otra.
+          </p>
+        </div>
+        <div class="grid feature-grid">
+          <article>
+            <div class="card-number">01</div>
+            <img
+              src="IMG/base.jpg"
+              alt="Grupo de visitantes celebrando en Descabellada"
+            />
+            <h3>Gente auténtica</h3>
+            <p>
+              Vecinos y visitantes convierten cada paseo en una historia para
+              contar. La bienvenida siempre viene acompañada de una sonrisa.
+            </p>
+            <a class="card-link" href="ciudad.html">Conocé su historia →</a>
+          </article>
+          <article>
+            <div class="card-number">02</div>
+            <img
+              src="IMG/mirador.png"
+              alt="Mirador costero de Descabellada al atardecer"
+            />
+            <h3>Vistas al mar</h3>
+            <p>
+              El Mirador de la Cabeza ofrece atardeceres memorables, brisa
+              fresca y una panorámica que explica por qué todos vuelven.
+            </p>
+            <a class="card-link" href="lugares.html">Ver el mirador →</a>
+          </article>
+          <article>
+            <div class="card-number">03</div>
+            <img
+              src="IMG/festival.png"
+              alt="Festival cultural en una plaza de Descabellada"
+            />
+            <h3>Agenda cultural</h3>
+            <p>
+              Festivales, música, ferias y encuentros abiertos a toda la
+              comunidad llenan de vida las plazas durante todo el año.
+            </p>
+            <a class="card-link" href="contacto.html">Planificá tu visita →</a>
+          </article>
+        </div>
+      </section>
+      <section class="section photo-story">
+        <div class="photo-story-main">
+          <img
+            src="IMG/plaza.png"
+            alt="Plaza histórica de Descabellada con vecinos y puestos de feria"
+          />
+        </div>
+        <div>
+          <p class="eyebrow">Un ritmo propio</p>
+          <h2>Donde el paseo se vuelve anécdota</h2>
+          <p>
+            En Descabellada no hace falta correr. Caminá por el centro
+            histórico, seguí el olor de las empanadas del puerto y dejate llevar
+            por las conversaciones de la plaza.
+          </p>
+          <p>
+            La ciudad se conoce mejor cuando se mira con tiempo: una ventana
+            colorida, una canción que sale de un bar o un vecino que te
+            recomienda su rincón favorito.
+          </p>
+          <a class="button" href="ciudad.html">Conocer la identidad local</a>
+        </div>
+      </section>
+      <section class="section quote-section">
+        <p class="eyebrow">Una frase local</p>
+        <blockquote>
+          “Acá nadie pregunta por tu pelo: pregunta qué historia traés.”
+        </blockquote>
+        <p class="quote-author">— Doña Clotilde, vecina del Centro histórico</p>
+      </section>
+    </main>
+    <footer>
+      <p><strong>Descabellada</strong> · Guía educativa 2026</p>
+      <div>
+        <a href="ciudad.html">Sobre la ciudad</a
+        ><a href="contacto.html">Información turística</a>
       </div>
-    </section>
-  </main>
-  <footer>
-    <p><strong>Descabellada</strong> · Guía educativa 2026</p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
