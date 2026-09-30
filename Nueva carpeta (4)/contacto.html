@@ -58,15 +58,14 @@
           alt="Visitantes disfrutando un festival en Descabellada"
         />
       </section>
-      <section class="section aura-section">
+      <section class="section aura-section" id="inscripcion">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Actividad especial</p>
-            <h2>Participá en una batalla de aura</h2>
+            <p class="eyebrow">Inscripción</p>
+            <h2>Elegí un evento y reservá tu lugar</h2>
           </div>
           <p class="section-note">
-            Mostrá tu estilo, elegí tu energía y sumate a un encuentro amistoso
-            frente al mar.
+            Completá tus datos, seleccioná una actividad y te confirmaremos la inscripción por email.
           </p>
         </div>
         <form
@@ -91,6 +90,13 @@
                 required
                 placeholder="tu@email.com" /></label
             ><label
+              >Evento<select id="evento" name="evento" required>
+                <option value="">Seleccioná un evento</option>
+                <option value="festival">Festival de los Pelados · 12 de enero</option>
+                <option value="aura">Batalla de aura · 26 de enero</option>
+                <option value="feria">Feria del Puerto · 08 de febrero</option>
+              </select></label
+            ><label
               >Edad<select name="edad" required>
                 <option value="">Seleccioná una opción</option>
                 <option>Menos de 18</option>
@@ -98,31 +104,26 @@
                 <option>31 a 50</option>
                 <option>Más de 50</option>
               </select></label
-            ><label
-              >Tipo de aura<select name="aura" required>
-                <option value="">Elegí tu energía</option>
-                <option>Marina</option>
-                <option>Solar</option>
-                <option>Remolino</option>
-                <option>Pelada legendaria</option>
-              </select></label
             >
           </div>
           <label
-            >¿Qué te gustaría aportar a la batalla?<textarea
+            >Mensaje<textarea
               name="mensaje"
               rows="5"
-              placeholder="Contanos tu estilo, habilidad o idea..."
-              required
+              placeholder="Contanos si venís con alguien o tenés alguna consulta..."
             ></textarea></label
           ><label class="check-field"
             ><input type="checkbox" name="acepta" required /><span
-              >Acepto recibir información sobre esta actividad y confirmo que
-              los datos son correctos.</span
+              >Acepto recibir información sobre el evento y confirmo que los datos son correctos.</span
             ></label
-          ><button class="button" type="submit">Quiero participar</button>
+          ><button class="button" type="submit">Enviar inscripción</button>
         </form>
       </section>
+      <script>
+        const eventSelect = document.querySelector("#evento");
+        const selectedEvent = new URLSearchParams(window.location.search).get("evento");
+        if (eventSelect && selectedEvent) eventSelect.value = selectedEvent;
+      </script>
       <section class="section faq">
         <p class="eyebrow">Preguntas rápidas</p>
         <h2>Antes de venir</h2>
