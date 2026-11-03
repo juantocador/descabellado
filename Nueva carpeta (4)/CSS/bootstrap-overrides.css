@@ -1,0 +1,38 @@
+/* Enhancements built on the original Descabellada palette */
+:root { --shadow-soft: 0 1rem 2.5rem rgba(11,31,42,.10); --shadow-hover: 0 1.25rem 3rem rgba(11,31,42,.16); }
+body { overflow-x: hidden; }
+header { position: sticky; top: 0; z-index: 1030; box-shadow: 0 .35rem 1.25rem rgba(11,31,42,.18); }
+nav a { position: relative; transition: color .2s ease; }
+nav a::after { content: ""; position: absolute; left: .625rem; right: .625rem; bottom: 0; height: 2px; background: var(--color-acento); transform: scaleX(0); transform-origin: center; transition: transform .2s ease; }
+nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+nav a.active { color: var(--color-acento); }
+.hero { border-radius: .5rem; box-shadow: var(--shadow-soft); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; width: 20rem; height: 20rem; right: -8rem; top: -10rem; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; box-shadow: 0 0 0 2rem rgba(255,255,255,.04), 0 0 0 4rem rgba(255,255,255,.03); }
+.button, .tag, article, .contact-card, .aura-form, .facts, .callout { border-radius: .4rem; }
+.button { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.button:hover { transform: translateY(-2px); box-shadow: 0 .5rem 1rem rgba(11,31,42,.18); }
+article, .contact-card, .aura-form, .facts { box-shadow: 0 .3rem 1.25rem rgba(11,31,42,.05); transition: transform .25s ease, box-shadow .25s ease; }
+article:hover, .contact-card:hover, .facts:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+article img, .photo-story img, .callout img, .mini-gallery img, .gallery-strip img { object-fit: cover; border-radius: .25rem; }
+.reveal { opacity: 0; transform: translateY(1rem); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.nav-toggle { display: none; border: 1px solid var(--color-acento); background: transparent; padding: .5rem; border-radius: .35rem; }
+.nav-toggle span:not(.visually-hidden) { display: block; width: 1.35rem; height: 2px; margin: 3px; background: var(--color-texto-claro); }
+.form-success { margin-top: 1rem; padding: .85rem 1rem; background: #e2ece9; color: var(--color-secundario); border-left: 4px solid var(--color-acento); font-weight: 700; }
+.aura-form input:focus, .aura-form select:focus, .aura-form textarea:focus { outline: 3px solid rgba(30,130,110,.2); box-shadow: 0 0 0 .15rem var(--color-acento); }
+@media (max-width: 700px) {
+  header { padding: 1rem; flex-wrap: wrap; }
+  .nav-toggle { display: block; margin-left: auto; }
+  nav { display: none; width: 100%; flex-direction: column; gap: .25rem; padding-top: .75rem; }
+  nav.is-open { display: flex; }
+  nav a { padding: .65rem .5rem; }
+  .hero { padding: 2.5rem 1.25rem; }
+  .hero-stamp { width: 6.5rem; height: 6.5rem; }
+  .hero h1 { font-size: 2rem; }
+  .section-heading, footer, .visit-tip { align-items: flex-start; flex-direction: column; }
+  .hero-actions { align-items: flex-start; flex-direction: column; }
+  main { padding: 1rem; }
+  footer { padding: 1.5rem 1rem; }
+  footer a { margin: 0 .75rem 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
