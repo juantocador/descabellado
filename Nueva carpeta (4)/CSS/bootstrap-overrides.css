@@ -1,6 +1,65 @@
 /* Enhancements built on the original Descabellada palette */
-:root { --shadow-soft: 0 1rem 2.5rem rgba(11,31,42,.10); --shadow-hover: 0 1.25rem 3rem rgba(11,31,42,.16); }
+:root { --shadow-soft: 0 1rem 2.5rem rgba(11,31,42,.10); --shadow-hover: 0 1.25rem 3rem rgba(11,31,42,.16); --border-soft:rgba(11,31,42,.12); --surface-highlight:rgba(255,255,255,.7); }
+body.dark-mode { --shadow-soft:0 .75rem 2rem rgba(0,0,0,.3); --shadow-hover:0 1rem 2.5rem rgba(0,0,0,.55); --border-soft:#303030; --surface-highlight:#111111; }
+
+body:not(.dark-mode) article, body:not(.dark-mode) .contact-card, body:not(.dark-mode) .aura-form, body:not(.dark-mode) .facts { background-image:linear-gradient(145deg, #ffffff 0%, #f7faf8 100%); }
+body:not(.dark-mode) .callout, body:not(.dark-mode) .aura-section { background-image:linear-gradient(135deg, #e8efec 0%, #f4f7f5 100%); }
+header, footer, article, .facts, .contact-card, .aura-form, .callout, .tag, .navigation-drawer { transition:background-color .22s ease, color .22s ease, border-color .22s ease, box-shadow .22s ease; }
+
+body.dark-mode header, body.dark-mode footer, body.dark-mode .hero, body.dark-mode .quote-section, body.dark-mode .visit-tip { background-image:none; }
+body.dark-mode article, body.dark-mode .facts, body.dark-mode .contact-card, body.dark-mode .aura-form, body.dark-mode .callout, body.dark-mode .aura-section { background-image:none; }
+body.dark-mode .nav-toggle, body.dark-mode .theme-toggle { border-color:#666666; color:#f5f5f5; }
+body.dark-mode .nav-toggle span { background:#f5f5f5; }
+body.dark-mode .form-success { background:#111111; border-left-color:#bdbdbd; color:#ffffff; }
+
+/* Fondo oscuro con relieve sutil, sin colores brillantes */
+@keyframes dark-ambient-drift {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 50%; }
+  50% { background-position: 8% 12%, 92% 18%, 48% 55%; }
+}
+
+body.dark-mode {
+  background-color:#000000 !important;
+  background-image: radial-gradient(ellipse at 8% 18%, rgb(35 35 35 / 30%), transparent 34%),
+    radial-gradient(ellipse at 92% 42%, rgb(24 24 24 / 24%), transparent 32%),
+    linear-gradient(145deg, #000000 18%, #080808 55%, #000000 100%);
+  background-size: 160% 160%, 160% 160%, 100% 100%;
+  animation: dark-ambient-drift 24s ease-in-out infinite;
+}
+
+body.dark-mode article img,
+body.dark-mode .two-col > img,
+body.dark-mode .photo-story img,
+body.dark-mode .callout > img,
+body.dark-mode .contact > img,
+body.dark-mode .mini-gallery img,
+body.dark-mode .gallery-strip img {
+  border: 2px solid #292929;
+  background: #050505;
+  box-shadow: 0 3px 14px rgb(0 0 0 / 45%);
+}
+
+body.dark-mode .two-col,
+body.dark-mode .photo-story,
+body.dark-mode .mini-gallery,
+body.dark-mode .callout,
+body.dark-mode .contact {
+  border-color: #303030;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 3%), 0 8px 24px rgb(0 0 0 / 35%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.dark-mode { animation:none; }
+}
+
 body { overflow-x: hidden; }
+body.dark-mode, body.dark-mode main { background-color:#000000 !important; color:#f5f5f5 !important; }
+body.dark-mode main {
+  background-image: radial-gradient(ellipse at 12% 8%, #101010 0, transparent 34%),
+    radial-gradient(ellipse at 88% 36%, #0c0c0c 0, transparent 28%),
+    repeating-linear-gradient(135deg, transparent 0 72px, rgb(255 255 255 / 1.2%) 73px, transparent 74px 145px) !important;
+}
+html:has(body.dark-mode) { background:#000000 !important; color-scheme:dark; }
 header { position: sticky; top: 0; z-index: 1030; box-shadow: 0 .35rem 1.25rem rgba(11,31,42,.18); }
 nav a { position: relative; transition: color .2s ease; }
 nav a::after { content: ""; position: absolute; left: .625rem; right: .625rem; bottom: 0; height: 2px; background: var(--color-acento); transform: scaleX(0); transform-origin: center; transition: transform .2s ease; }
@@ -16,7 +75,7 @@ article:hover, .contact-card:hover, .facts:hover { transform: translateY(-5px); 
 article img, .photo-story img, .callout img, .mini-gallery img, .gallery-strip img { object-fit: cover; border-radius: .25rem; }
 .reveal { opacity: 0; transform: translateY(1rem); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
-.nav-toggle { display: none; border: 1px solid var(--color-acento); background: transparent; padding: .5rem; border-radius: .35rem; }
+.nav-toggle { display: flex !important; align-items: center; justify-content: center; flex-direction: column; gap: 4px; border: 1px solid var(--color-acento); background: transparent; padding: .5rem; border-radius: .35rem; margin-left: auto; cursor: pointer; }
 .nav-toggle span:not(.visually-hidden) { display: block; width: 1.35rem; height: 2px; margin: 3px; background: var(--color-texto-claro); }
 .form-success { margin-top: 1rem; padding: .85rem 1rem; background: #e2ece9; color: var(--color-secundario); border-left: 4px solid var(--color-acento); font-weight: 700; }
 .aura-form input:focus, .aura-form select:focus, .aura-form textarea:focus { outline: 3px solid rgba(30,130,110,.2); box-shadow: 0 0 0 .15rem var(--color-acento); }
@@ -88,3 +147,42 @@ article img,
 }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* Cajas editoriales: imagen y texto comparten el mismo bloque visual */
+.two-col, .photo-story, .mini-gallery, .callout, .contact {
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: .5rem;
+  box-shadow: 0 .35rem 1.25rem rgba(11,31,42,.08);
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.two-col > img, .photo-story-main img, .mini-gallery > div:first-child img, .callout > img, .contact > img {
+  border: 1px solid var(--color-borde);
+  border-radius: .35rem;
+  flex: 0 1 42%;
+  height: auto !important;
+  max-height: 22rem;
+  max-width: 42%;
+  min-width: 16rem;
+  object-fit: cover !important;
+}
+
+.photo-story-main, .mini-gallery > div:first-child { flex: 0 1 46%; }
+.photo-story-main img, .mini-gallery > div:first-child img { max-width: 100%; width: 100% !important; }
+.two-col > div, .photo-story > div:not(.photo-story-main), .mini-gallery > div:last-child, .callout > div, .contact > div { flex: 1 1 18rem; }
+
+body.dark-mode .two-col, body.dark-mode .photo-story, body.dark-mode .mini-gallery, body.dark-mode .callout, body.dark-mode .contact {
+  background: #050505;
+  border-color: #303030;
+  box-shadow: 0 .35rem 1.25rem rgba(0,0,0,.5);
+}
+
+@media (max-width: 700px) {
+  .two-col, .photo-story, .mini-gallery, .callout, .contact { align-items: stretch; }
+  .two-col > img, .photo-story-main img, .mini-gallery > div:first-child img, .callout > img, .contact > img {
+    max-width: 100%;
+    min-width: 0;
+    width: 100% !important;
+  }
+}
