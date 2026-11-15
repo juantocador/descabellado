@@ -3,24 +3,15 @@
     */
 :root {
   
-  --color-primario: #0b1f2a;
-  --color-secundario: #1b4958;
-  --color-acento: #1e826e;
-  --color-fondo: #f2f5f3;
-  --color-tarjeta: #ffffff;
+  --color-primario: #C2AB56 ;
+  --color-secundario: #D5C58A;
+  --color-acento: #a68b28;
+  --color-fondo: #FFEE8C;
+  --color-tarjeta: #C2AB56;
   --color-borde: #c4d4ce;
   --color-texto: #1a2421;
-  --color-texto-claro: #ffffff;
-  --color-muted: #536b63;
-  --color-superficie-suave: #e8efec;
-  --color-acento-hover: #176b5c;
-  --color-focus: #0d6b5b;
-  --color-fondo-oscuro: #000000;
-  --color-superficie-oscura: #050505;
-  --color-borde-oscuro: #303030;
-  --color-texto-oscuro: #f5f5f5;
-  --color-muted-oscuro: #bdbdbd;
-  --color-acento-oscuro: #e5e5e5;
+  --color-texto-claro: #FFffff;
+  --color-muted: #816a14;
 
   
   --fuente-principal: 'Inter', Arial, sans-serif;
@@ -45,22 +36,13 @@ body {
   color: var(--color-texto);
   font-family: var(--fuente-principal);
   line-height: 1.6;
-  transition: background-color .22s ease, color .22s ease;
 }
 
 a {
   color: var(--color-acento);
   font-weight: 700;
   text-decoration: none;
-  text-underline-offset: .2em;
 }
-
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
-}
-
-::selection { background: var(--color-secundario); color: var(--color-texto-claro); }
 
 /* 
    ENCABEZADO Y NAVEGACIÓN (Flexbox)
@@ -387,7 +369,7 @@ article img {
 }
 
 .callout {
-  background-color: #e2ece9;
+  background-color: #E8DFBE;
   padding: 1.5rem;
 }
 
@@ -472,7 +454,7 @@ address {
   margin-top: 0.5rem;
   padding: 0.75rem;
   border: 0.0625rem solid var(--color-borde);
-  background-color: #ffffff;
+  background-color: #E8DFBE;
   color: var(--color-texto);
   font-family: var(--fuente-principal);
   font-size: 0.875rem;
