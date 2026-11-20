@@ -12,7 +12,15 @@
   --color-texto: #1a2421;
   --color-texto-claro: #FFffff;
   --color-muted: #816a14;
-
+ --color-superficie-suave: #e8efec;
+  --color-acento-hover: #8a7014;
+  --color-focus: #6b560d;
+  --color-fondo-oscuro: #514424;
+  --color-superficie-oscura: #5c4c23;
+  --color-borde-oscuro: #3f3619;
+  --color-texto-oscuro: #f3ecd2;
+  --color-muted-oscuro: #b9aa6c;
+  --color-acento-oscuro: #d9bf4f;
   
   --fuente-principal: 'Inter', Arial, sans-serif;
   --fuente-titulos: 'Lora', Georgia, serif;
