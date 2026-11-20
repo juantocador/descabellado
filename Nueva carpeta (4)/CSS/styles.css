@@ -486,6 +486,18 @@ address {
   margin-top: 0.25rem;
 }
 
+.topo-section { padding: 2rem; background: #eef1e7; border-top: 1px solid var(--color-borde); }
+.topo-section .section-heading { margin-bottom: 1rem; }
+.topo-map-frame { position: relative; overflow: hidden; border: 1px solid #c7bea0; border-radius: .35rem; background: #e8eadf; box-shadow: 0 12px 30px rgba(41, 47, 36, .12); }
+#topo-map { width: 100%; height: clamp(20rem, 46vw, 33rem); }
+.topo-map-caption { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; background: #fffdf7; color: var(--color-texto); font-size: .8rem; letter-spacing: .04em; }
+.topo-map-caption span:first-child { font-weight: 800; }
+.topo-map-caption i { display: inline-block; width: .6rem; height: .6rem; margin-right: .4rem; border-radius: 50%; background: #a34431; box-shadow: 0 0 0 3px rgba(163, 68, 49, .16); }
+.map-note { margin: .75rem 0 .25rem; color: var(--color-muted); font-size: .82rem; }
+.topo-section .text-link { display: inline-block; margin-top: .5rem; }
+body.dark-mode .topo-section { background: #333b32; }
+body.dark-mode .topo-map-caption { background: #20251f; color: var(--color-texto-oscuro); }
+
 /* PREGUNTAS FRECUENTES */
 .faq-grid div {
   flex: 1 1 14rem;
